@@ -1,12 +1,4 @@
-select * from brasil WHERE taxa_ocupados_carteira is NULL
-select * from brasil WHERE taxa_ocupados_carteira is not NULL
-SELECT null + 1
-select SUM( taxa_ocupados_carteira) from brasil 
--- varchar = texto int = inteiro data = data - transformar tudo em decimal
-alter TABLE brasil alter COLUMN taxa_ocupados_carteira DECIMAL (10,2)
-SELECT taxa_ocupados_carteira from brasil
-
--- Limpeza da Base--
+# Limpeza da Base
 select * from brasil
 alter TABLE brasil alter COLUMN taxa_ocupados_carteira DECIMAL (10,2)
 alter TABLE brasil alter COLUMN expectativa_vida DECIMAL (10,2)
@@ -240,10 +232,7 @@ alter TABLE brasil alter COLUMN  idhm_e DECIMAL (10,2)
 alter TABLE brasil alter COLUMN  idhm_l DECIMAL (10,2)
 alter TABLE brasil alter COLUMN  idhm_r INT (10)
 
-
-SELECT idhm_r FROM brasil
-(idhm_r * 100)
-
+# Consultas
 
 -- 1) Qual é o sexo biológico que nasce mais a cada década passada?
 SELECT ano, populacao_homens_0_4, populacao_mulheres_0_4 FROM brasil
