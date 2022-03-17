@@ -1,0 +1,18 @@
+# Consultas
+
+-- 1) Qual é o sexo biológico que nasce mais a cada década passada?
+SELECT ano, populacao_homens_0_4, populacao_mulheres_0_4 FROM brasil
+
+
+
+-- 2) Qual o sexo biologico com população em cada década?
+
+SELECT ano, populacao_homens, populacao_mulheres from brasil
+
+-- 3) Qual o sexo biologico com maior população com idosos de 80 anos ou mais?
+
+SELECT ano, populacao_homens_80_mais, populacao_mulheres_80_mais from brasil
+
+-- 4) Qual a expectativa de vida por decada? 
+
+SELECT ano, expectativa_vida from brasil
