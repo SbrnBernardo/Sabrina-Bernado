@@ -2,7 +2,7 @@
 
 SELECT * FROM births
 
-# FORMATÇÃO
+# Formatação
 alter TABLE births alter COLUMN  births DECIMAL (10,2)
 
 ## 1) Em qual ano houve mais nascimentos?
