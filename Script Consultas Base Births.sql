@@ -3,6 +3,26 @@ SELECT * FROM births
 --FORMATÇÃO
 alter TABLE births alter COLUMN  births DECIMAL (10,2)
 
+--Correção coluna dias - dados não correspondentes
+
+SELECT * FROM births
+UPDATE  births
+SET day = '00'  
+WHERE day ='99'
+
+UPDATE  births
+SET day = '00' 
+WHERE day ='31' AND month = '2'
+
+UPDATE  births
+SET day = '00' 
+WHERE day ='30' AND month = '2'
+
+UPDATE  births
+SET day = '00' 
+WHERE day ='NULL';
+
+
 -- 1) Em qual ano houve mais nascimentos?
 SELECT year, SUM(births) FROM births
 GROUP BY year
